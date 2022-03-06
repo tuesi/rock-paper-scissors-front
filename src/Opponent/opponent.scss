@@ -1,0 +1,52 @@
+:root {
+    --spin-amount: -75%;
+}
+$spin-amount: var(--spin-amount);
+
+
+.Opponent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 30%;
+    margin-top: 5%;
+}
+
+.Choice {
+    position: relative;
+    width: 150px;
+    border-radius: 10px;
+    border: 1.5px solid black;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    ul {
+        position: absolute;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        animation: slot 2s linear infinite;
+    }
+    li {
+        display: block;
+    }
+    &::after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+}
+
+@keyframes slot {
+    100% {
+        transform: translateY($spin-amount);
+    }
+}
+
+.OpponentImage {
+    position: relative;
+    width: 100%;
+}
+
