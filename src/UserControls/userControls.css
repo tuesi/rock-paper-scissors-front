@@ -54,4 +54,15 @@
   display: block;
   padding-bottom: 100%;
 }
+
+.SELECTED {
+  width: 100%;
+  -webkit-filter: brightness(105%);
+          filter: brightness(105%);
+}
+
+.NOSELECT {
+  width: 100%;
+  opacity: 0.5;
+}
 /*# sourceMappingURL=userControls.css.map */
