@@ -12,7 +12,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100%;
+  width: 50%;
   gap: 15px;
 }
 
