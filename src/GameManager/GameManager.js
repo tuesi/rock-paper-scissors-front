@@ -23,7 +23,9 @@ function GameManager() {
   return (
     <div className='GameManager'>
         {(status) && 
-        <button className='RestartButton' onClick={resetGame}>RESTART</button>}
+        <button className='RestartButton' onClick={resetGame}>
+            <span>RESTART</span>
+        </button>}
     </div>
   )
 }
