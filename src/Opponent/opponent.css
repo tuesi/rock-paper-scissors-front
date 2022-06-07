@@ -1,0 +1,52 @@
+.Opponent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 45%;
+  margin-top: 5%;
+}
+
+.Choice {
+  position: relative;
+  width: 150px;
+  border-radius: 10px;
+  outline: 2.5px solid black;
+  padding: 0;
+  margin: 0;
+  width: 30%;
+  overflow: hidden;
+}
+
+.Choice ul {
+  position: absolute;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+.Choice li {
+  display: block;
+}
+
+.Choice::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.OpponentImage {
+  position: relative;
+  width: 100%;
+}
+/*# sourceMappingURL=opponent.css.map */

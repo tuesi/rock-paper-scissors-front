@@ -1,0 +1,66 @@
+.UserControls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.UserInput {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    max-width: 250px;
+    gap: 15px;
+}
+
+.Image {
+    width: 100%;
+    opacity: 1;
+    &:hover {
+        filter: brightness(105%);
+    }
+    &:active {
+        opacity: 0.5;
+    }
+}
+
+.Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 10px;
+    min-width: 55%;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background: transparent;
+    &::after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+}
+
+.SELECTED{
+    width: 100%;
+    filter: brightness(105%);
+}
+
+.NOSELECT{
+    width: 100%;
+    opacity: 0.5;
+}
+
+.PlayerUsername{
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 2%;
+    text-align: center;
+}

@@ -1,0 +1,68 @@
+.UserControls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 50%;
+  gap: 15px;
+}
+
+.Image {
+  width: 100%;
+  opacity: 1;
+}
+
+.Image:hover {
+  -webkit-filter: brightness(105%);
+          filter: brightness(105%);
+}
+
+.Image:active {
+  opacity: 0.5;
+}
+
+.Button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 150px;
+  border-radius: 10px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+.Button::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.SELECTED {
+  width: 100%;
+  -webkit-filter: brightness(105%);
+          filter: brightness(105%);
+}
+
+.NOSELECT {
+  width: 100%;
+  opacity: 0.5;
+}
+/*# sourceMappingURL=userControls.css.map */
