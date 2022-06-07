@@ -1,0 +1,13 @@
+@import "../Style/Variables.scss";
+.ModeSelect{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 25px;
+}
+.ModeButton{
+    @include MainButton(relative, 2%, 1.4em);
+}

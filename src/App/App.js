@@ -1,31 +1,50 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./app.scss"
 import UserControls from "../UserControls/UserControls"
 import Opponent from "../Opponent/Opponent";
 import Status from "../Status/Status";
-import socketClient from "socket.io-client";
 import GameManager from "../GameManager/GameManager";
-const SERVER = "http://192.168.0.131:8080";
+import User from "../User/User";
+import ModeSelect from "../ModeSelect/ModeSelect";
+import { useSelector } from 'react-redux';
+import Backend from '../Backend/Backend';
+
 function App() {
 
-  // const socket = socketClient(SERVER);
+  const { usernameSelect } = useSelector((state) => state.usernameSelect);
+  const { mode } = useSelector((state) => state.mode);
+  const [showGame, setShowGame] = useState(false);
+  const [showModeSelect, setShowModeSelect] = useState(true);
 
-  // useEffect(() => {
-  //   socket.on('connection', () => {
-  //     socket.emit('join', socket.id);
-  //   });
-  // },[])
-
-  // function sendChoice(choice) {
-  //   socket.emit('choice', socket.id, choice);
-  // }
+  useEffect(()=>{
+    if(usernameSelect !== "" && mode !== ""){
+      setShowGame(true);
+    }
+    if(mode === "single"){ setShowModeSelect(false); setShowGame(true); return};
+    if(mode === "vs") { setShowModeSelect(false); return};
+    if(mode === "royal"){ setShowModeSelect(false); return};
+  },[usernameSelect, mode])
 
   return (
     <div className="App">
-      <UserControls />
-      <Status />
-      <Opponent />
-      <GameManager />
+      <Backend />
+      {(showModeSelect) ? 
+      <ModeSelect /> :
+      <>
+        {(showGame) ?
+        <>
+          <UserControls />
+          <Status />
+          <Opponent />
+          <GameManager />
+        </>
+          :
+        <>
+          <User />
+        </>
+        }
+      </>
+      }
     </div>
   );
 }

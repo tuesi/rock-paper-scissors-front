@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import "./gameManager.scss"
 import { useDispatch, useSelector } from 'react-redux'
 import { gameStatus } from "../redux/gameStatus"
+import { reset } from "../Backend/Backend"
 
 
 function GameManager() {
@@ -17,6 +18,7 @@ function GameManager() {
     useEffect(()=>{
         if(userSelect === -1 && opponentSelect === -1 && status === "reset"){
             dispatch(gameStatus(""));
+            reset();
         }
     },[userSelect, opponentSelect, status])
 

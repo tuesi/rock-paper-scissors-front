@@ -1,10 +1,30 @@
-.Opponent {
+.OpponentWrap {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
+    margin-top: 5%;
+    max-width: 30%;
+}
+.RoyalOpponent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
     width: 50%;
-    margin-top: 2%;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+
+.Opponent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 5%;
+    flex-wrap: wrap;
 }
 
 .Choice {
@@ -12,9 +32,7 @@
     width: 150px;
     border-radius: 10px;
     outline: 2.5px solid black;
-    padding: 0;
-    margin: 0;
-    max-width: 45%;
+    max-width: 100%;
     overflow: hidden;
     ul {
         position: absolute;
@@ -36,5 +54,26 @@
 .OpponentImage {
     position: relative;
     width: 100%;
+    &.eliminated {
+        opacity: 0.5;
+    }
+}
+
+.Username {
+    width: 50%;
+    font-size: 2vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 2%;
+    text-align: center;
+    width: 100%;
+}
+
+.EliminateImage {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    opacity: 0.5;
 }
 
